@@ -1,0 +1,16 @@
+language: node_js
+node_js: 'node'
+addons:
+  chrome: stable
+env:
+  - karma_webpack_version=2.0.7
+  - karma_webpack_version=2.0.8
+  - karma_webpack_version=2.0.9
+install:
+  - npm install
+  - npm install karma-webpack@$karma_webpack_version
+before_script:
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+script:
+  - xvfb-run npm test
