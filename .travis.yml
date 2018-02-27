@@ -7,6 +7,8 @@ env:
   - karma_webpack_version=2.0.8
   - karma_webpack_version=2.0.9
   - karma_webpack_version=2.0.10
+  - karma_webpack_version=2.0.11
+  - karma_webpack_version=2.0.12
 install:
   - npm install
   - npm install karma-webpack@$karma_webpack_version
